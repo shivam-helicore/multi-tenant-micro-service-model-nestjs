@@ -1,0 +1,6 @@
+export enum App {
+    PRTS = 'PRTS',
+    ADMIN = 'ADMIN',
+    PUBLIC_PORTAL = 'PUBLIC_PORTAL',
+    EDUCATIONAL_PORTAL = 'EDUCATIONAL_PORTAL'
+}

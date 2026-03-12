@@ -1,0 +1,7 @@
+export enum Role {
+    PCI_ADMIN = 'PCI_ADMIN',
+    REGISTRAR = 'REGISTRAR',
+    CLERK = 'CLERK',
+    PHARMACIST = 'PHARMACIST',
+    COLLEGE_ADMIN = 'COLLEGE_ADMIN',
+}

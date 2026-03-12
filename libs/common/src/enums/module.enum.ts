@@ -1,0 +1,8 @@
+export enum Module {
+    AUTH = 'AUTH',
+    USER = 'USER',
+    TENANT = 'TENANT',
+    APPLICATION = 'APPLICATION',
+    PAYMENT = 'PAYMENT',
+    NOTIFICATION = 'NOTIFICATION',
+}
