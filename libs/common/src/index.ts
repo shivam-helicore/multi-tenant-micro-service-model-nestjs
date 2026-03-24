@@ -7,3 +7,5 @@ export * from './enums/role.enum';
 export * from './constants/headers.constants';
 export * from './constants/system.constants';
 export * from './middleware/tenant.middleware';
+export * from './context/request-context';
+export * from './middleware/request-context.middleware';

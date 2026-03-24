@@ -1,0 +1,72 @@
+version: "3.8"
+
+services:
+
+  redis:
+    image: redis:7
+    container_name: prts-redis
+    ports:
+      - "6379:6379"
+    restart: always
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: prts-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    restart: always
+
+  dynamodb:
+    image: amazon/dynamodb-local
+    container_name: prts-dynamodb
+    ports:
+      - "8000:8000"
+    command: "-jar DynamoDBLocal.jar -sharedDb"
+    restart: always
+
+  prometheus:
+    image: prom/prometheus
+    container_name: prts-prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - ../prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    restart: always
+
+  grafana:
+    image: grafana/grafana
+    container_name: prts-grafana
+    ports:
+      - "3001:3000"
+    depends_on:
+      - prometheus
+    restart: always
+
+  postgres:
+    image: postgres:15
+    container_name: prts-postgres
+    environment:
+      POSTGRES_USER: prts
+      POSTGRES_PASSWORD: prts123
+      POSTGRES_DB: prts_platform
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: always
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: prts-pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@prts.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+    ports:
+      - "5050:80"
+    depends_on:
+      - postgres
+    restart: always
+
+volumes:
+  postgres_data:

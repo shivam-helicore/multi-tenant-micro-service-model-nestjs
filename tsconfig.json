@@ -23,14 +23,26 @@
       "@prts/activity/*": [
         "libs/activity/src/*"
       ],
+      "@prts/common/*": [
+        "libs/common/src/*"
+      ],
+      "@prts/database": [
+        "libs/database/src"
+      ],
+      "@prts/database/*": [
+        "libs/database/src/*"
+      ],
       "@prts/logger": [
         "libs/logger/src"
       ],
       "@prts/logger/*": [
         "libs/logger/src/*"
       ],
-      "@prts/common/*": [
-        "libs/common/src/*"
+      "@prts/metrics": [
+        "libs/metrics/src"
+      ],
+      "@prts/metrics/*": [
+        "libs/metrics/src/*"
       ]
     }
   }
