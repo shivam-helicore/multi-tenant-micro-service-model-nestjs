@@ -1,0 +1,12 @@
+import { Injectable } from '@nestjs/common';
+import { ConfigService as NestConfigService } from '@nestjs/config';
+
+@Injectable()
+export class AppConfigService {
+  constructor(private readonly config: NestConfigService) {}
+
+  get(key: string): string | undefined {
+    return this.config.get<string>(key);
+  }
+}
+

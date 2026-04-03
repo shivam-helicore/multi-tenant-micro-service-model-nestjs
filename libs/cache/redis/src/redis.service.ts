@@ -1,0 +1,2 @@
+export { RedisService } from '../../../redis/src/redis.service';
+

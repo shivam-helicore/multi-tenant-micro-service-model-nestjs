@@ -26,6 +26,54 @@
       "@prts/common/*": [
         "libs/common/src/*"
       ],
+      "@prts/tenant": [
+        "libs/tenant/src"
+      ],
+      "@prts/tenant/*": [
+        "libs/tenant/src/*"
+      ],
+      "@prts/cache/redis": [
+        "libs/cache/redis/src"
+      ],
+      "@prts/cache/redis/*": [
+        "libs/cache/redis/src/*"
+      ],
+      "@prts/messaging/rabbitmq": [
+        "libs/messaging/rabbitmq/src"
+      ],
+      "@prts/messaging/rabbitmq/*": [
+        "libs/messaging/rabbitmq/src/*"
+      ],
+      "@prts/core/config": [
+        "libs/core/config/src"
+      ],
+      "@prts/core/config/*": [
+        "libs/core/config/src/*"
+      ],
+      "@prts/dto": [
+        "libs/dto/src"
+      ],
+      "@prts/dto/*": [
+        "libs/dto/src/*"
+      ],
+      "@prts/auth": [
+        "libs/auth/src"
+      ],
+      "@prts/auth/*": [
+        "libs/auth/src/*"
+      ],
+      "@prts/audit": [
+        "libs/audit/src"
+      ],
+      "@prts/audit/*": [
+        "libs/audit/src/*"
+      ],
+      "@prts/rbac": [
+        "libs/rbac/src"
+      ],
+      "@prts/rbac/*": [
+        "libs/rbac/src/*"
+      ],
       "@prts/database": [
         "libs/database/src"
       ],
